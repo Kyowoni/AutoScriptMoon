@@ -1,6 +1,6 @@
 <h1 align="center">Premium AutoScript Debian Buster<img src="https://img.shields.io/badge/Version-2.0.4-blue.svg"></h1>
 
-<p align="center">VPN AutoScript is made by raziman869 to minimize the time consumed and user involvement in setting up your VPS</p>
+<p align="center">VPN AutoScript is made by Kyowon to minimize the time consumed and user involvement in setting up your VPS</p>
 
 <h3 align="center">Supported Linux Distribution</h3>
 <p align="center">
@@ -34,13 +34,13 @@ wget https://raw.githubusercontent.com/Kyowoni/AutoScriptMoon/master/DB && chmod
 <h3 align="center">Installation (Experimental)</h3>
 
   ```html
-wget https://raw.githubusercontent.com/raziman869/AutoScriptDB/master/DBE && chmod +x DBE && ./DBE
+wget https://raw.githubusercontent.com/Kyowoni/AutoScriptMoon/master/DBE && chmod +x DBE && ./DBE
   ```
  
 <h3 align="center">Installation (Unstable Early Version)</h3>
 
   ```html
-wget https://raw.githubusercontent.com/raziman869/AutoScriptDB/master/DBM && chmod +x DBM && ./DBM
+wget https://raw.githubusercontent.com/Kyowoni/AutoScriptMoon/master/DBM && chmod +x DBM && ./DBM
   ```
 
 
