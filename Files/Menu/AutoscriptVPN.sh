@@ -4,8 +4,8 @@
 # Official Repository: https://github.com/MoonlightVPS/AutoScriptDB
 # For Updates, Suggestions, and Bug Reports, Join to my Messenger Groupchat(VPS Owners): https://m.me/join/AbbHxIHfrY9SmoBO
 # For Donations, Im accepting prepaid loads or GCash transactions:
-# Smart: 09206200840
-# Facebook: https://fb.me/johndesu090
+
+# Telegram: t.me/Kyowon or @Kyowon
 # Thanks for using this script, Enjoy Highspeed OpenVPN Service
 
 #############################
@@ -26,7 +26,7 @@ Dropbear_Port1='445'
 Dropbear_Port2='442'
 
 # Stunnel Ports
-Stunnel_Port1='443' # through Dropbear
+Stunnel_Port1='446' # through Dropbear
 Stunnel_Port2='444' # through OpenSSH
 
 # OpenVPN Ports
@@ -693,7 +693,7 @@ refresh_pattern ^ftp: 1440 20% 10080
 refresh_pattern ^gopher: 1440 0% 1440
 refresh_pattern -i (/cgi-bin/|\?) 0 0% 0
 refresh_pattern . 0 20% 4320
-visible_hostname JohnFordTV
+visible_hostname D-Kyo
 mySquid
 
  # Setting machine's IP Address inside of our Squid config(security that only allows this machine to use this proxy server)
@@ -1224,7 +1224,7 @@ echo " "
 echo "Installation has been completed!!"
 echo "--------------------------------------------------------------------------------"
 echo "                            Debian Premium Script                               "
-echo "                                 -FordSenpai-                                   "
+echo "                               -MoonlightVPN-                                   "
 echo "--------------------------------------------------------------------------------"
 echo ""  | tee -a log-install.txt
 echo "Server Information"  | tee -a log-install.txt
@@ -1256,8 +1256,8 @@ echo ""  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "OpenVPN Configs Download"  | tee -a log-install.txt
 echo "   - Download Link           : http://$IPADDR:85/configs.zip"  | tee -a log-install.txt
-echo " ©JohnFordTV"  | tee -a log-install.txt
-echo " Facebook: https://fb.me/johndesu090"  | tee -a log-install.txt
+echo " ©D-Kyo"  | tee -a log-install.txt
+echo " Telegram: https://t.me/Kyowon"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo " This script is under project of https://github.com/Kyowoni/AutoScriptDB"  | tee -a log-install.txt
 echo " Please Reboot your VPS"
