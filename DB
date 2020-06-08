@@ -5,7 +5,7 @@
 #############################
 # Variables (Can be changed depends on your preferred values)
 # Script name
-MyScriptName='SigulaDev-Premium Script'
+MyScriptName='MoonlightVPN Premium Script'
 
 # OpenSSH Ports
 SSH_Port1='22'
@@ -13,7 +13,7 @@ SSH_Port2='53'
 SSH_Port2='80'
 
 # Your SSH Banner
-SSH_Banner='https://raw.githubusercontent.com/raziman869/AutoScriptDB/master/Files/Plugins/banner'
+SSH_Banner='https://raw.githubusercontent.com/Kyowoni/AutoScriptMoon/master/Files/Plugins/banner'
 
 # Dropbear Ports
 Dropbear_Port1='445'
@@ -24,7 +24,7 @@ Stunnel_Port1='446' # through Dropbear
 Stunnel_Port2='444' # through OpenSSH
 
 # OpenVPN Ports
-OpenVPN_TCP_Port='443'
+OpenVPN_TCP_Port='465'
 OpenVPN_UDP_Port='25222'
 
 # Privoxy Ports
@@ -40,7 +40,7 @@ Squid_Port3='80'
 OvpnDownload_Port='85' # Before changing this value, please read this document. It contains all unsafe ports for Google Chrome Browser, please read from line #23 to line #89: https://chromium.googlesource.com/chromium/src.git/+/refs/heads/master/net/base/port_util.cc
 
 # Server local time
-MyVPS_Time='Asia/Manila'
+MyVPS_Time='Asia/KualaLumpur'
 #############################
 
 
@@ -91,7 +91,7 @@ function InstUpdates(){
 function InstWebmin(){
  # Download the webmin .deb package
  # You may change its webmin version depends on the link you've loaded in this variable(.deb file only, do not load .zip or .tar.gz file):
- WebminFile='https://github.com/raziman869/AutoScriptDB/raw/master/Files/Plugins/webmin_1.920_all.deb'
+ WebminFile='https://github.com/Kyowoni/AutoScriptMoon/raw/master/Files/Plugins/webmin_1.920_all.deb'
  wget -qO webmin.deb "$WebminFile"
  
  # Installing .deb package for webmin
@@ -1025,16 +1025,16 @@ iptables -A INPUT -s $(wget -4qO- http://ipinfo.io/ip) -p tcp -m multiport --dpo
 /usr/local/sbin/delete_expired &> /dev/null
 exit 0
 EOFSH
- cat <<'FordServ' > /etc/systemd/system/Sigula.service
+ cat <<'FordServ' > /etc/systemd/system/Kyowoni.service
  
  # Setting server local time every time this machine reboots
- sed -i "s|MyVPS_Time|$MyVPS_Time|g" /etc/Sigula/startup.sh
+ sed -i "s|MyVPS_Time|$MyVPS_Time|g" /etc/Kyowoni/startup.sh
 
  # 
  rm -rf /etc/sysctl.d/99*
 
  # Setting our startup script to run every machine boots 
- cat <<'FordServ' > /etc/systemd/system/Sigula.service
+ cat <<'FordServ' > /etc/systemd/system/Kyowoni.service
 [Unit]
 Description=Sigula Startup Script
 Before=network-online.target
@@ -1048,7 +1048,7 @@ RemainAfterExit=yes
 [Install]
 WantedBy=multi-user.target
 FordServ
- chmod +x /etc/systemd/system/Sigula.service
+ chmod +x /etc/systemd/system/Kyowoni.service
  systemctl daemon-reload
  systemctl start Sigula
  systemctl enable Sigula &> /dev/null
@@ -1069,7 +1069,7 @@ echo -e " Creating Menu scripts.."
 
 cd /usr/local/sbin/
 rm -rf {accounts,base-ports,base-ports-wc,base-script,bench-network,clearcache,connections,create,create_random,create_trial,delete_expired,diagnose,edit_dropbear,edit_openssh,edit_openvpn,edit_ports,edit_squid3,edit_stunnel4,locked_list,menu,options,ram,reboot_sys,reboot_sys_auto,restart_services,server,set_multilogin_autokill,set_multilogin_autokill_lib,show_ports,speedtest,user_delete,user_details,user_details_lib,user_extend,user_list,user_lock,user_unlock}
-wget -q 'https://github.com/raziman869/AutoScriptDB/raw/master/Files/Menu/bashmenu.zip'
+wget -q 'https://github.com/Kyowoni/AutoScriptMoon/raw/master/Files/Menu/bashmenu.zip'
 unzip -qq bashmenu.zip
 rm -f bashmenu.zip
 chmod +x ./*
@@ -1082,17 +1082,17 @@ cd ~
 function ScriptMessage(){
  echo -e " [\e[1;32m$MyScriptName VPS Installer\e[0m]"
  echo -e ""
- echo -e " t.me/sigula"
- echo -e " [PAYPAL] huhu86977@gmail.com"
+ echo -e " t.me/Kyowon"
+ echo -e " [PAYPAL] kyojenmoon@gmail.com"
  echo -e ""
 }
 
 function InstBadVPN(){
  # Pull BadVPN Binary 64bit or 32bit
 if [ "$(getconf LONG_BIT)" == "64" ]; then
- wget -O /usr/bin/badvpn-udpgw "https://github.com/raziman869/AutoScriptDB/raw/master/Files/Plugins/badvpn-udpgw64"
+ wget -O /usr/bin/badvpn-udpgw "https://github.com/Kyowoni/AutoScriptMoon/raw/master/Files/Plugins/badvpn-udpgw64"
 else
- wget -O /usr/bin/badvpn-udpgw "https://github.com/raziman869/AutoScriptDB/raw/master/Files/Plugins/badvpn-udpgw"
+ wget -O /usr/bin/badvpn-udpgw "https://github.com/raziman869/AutoScriptMoon/raw/master/Files/Plugins/badvpn-udpgw"
 fi
  # Set BadVPN to Start on Boot via .profile
  sed -i '$ i\screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300' /root/.profile
@@ -1193,7 +1193,7 @@ fi
  cd ~
  
   # Running screenfetch
- wget -O /usr/bin/screenfetch "https://raw.githubusercontent.com/raziman869/AutoScriptDB/master/Files/Plugins/screenfetch"
+ wget -O /usr/bin/screenfetch "https://raw.githubusercontent.com/Kyowoni/AutoScriptMoon/master/Files/Plugins/screenfetch"
  chmod +x /usr/bin/screenfetch
  echo "/bin/bash /etc/openvpn/openvpn.bash" >> .profile
  echo "clear" >> .profile
@@ -1208,7 +1208,7 @@ echo " "
 echo "Installation has been completed!!"
 echo "--------------------------------------------------------------------------------"
 echo "                            Debian Premium Script                               "
-echo "                                 -SigulaDev-                                   "
+echo "                               -MoonlightVPN-                                   "
 echo "--------------------------------------------------------------------------------"
 echo ""  | tee -a log-install.txt
 echo "Server Information"  | tee -a log-install.txt
@@ -1243,7 +1243,7 @@ echo "   - Download Link           : http://$IPADDR:85/configs.zip"  | tee -a lo
 echo " ©SigulaDev"  | tee -a log-install.txt
 echo " t.me/sigula"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
-echo " This script is under project of https://github.com/raziman869/AutoScriptDB"  | tee -a log-install.txt
+echo " This script is under project of https://github.com/Kyowoni/AutoScriptMoon"  | tee -a log-install.txt
 echo " Please Reboot your VPS"
 
  # Clearing all logs from installation
