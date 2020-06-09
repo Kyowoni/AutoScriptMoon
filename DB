@@ -383,7 +383,7 @@ Certificate:
                 50:31:04:C4:7A:47:C1:DA:46:CC:77:38:DE:1C:63:10:40:C3:80:22
             X509v3 Authority Key Identifier:
                 keyid:2D:71:9E:0D:00:4B:5C:23:C8:77:41:77:AF:FE:7C:14:30:A6:8C:2E
-                DirName:/C=PH/ST=Tarlac/L=Concepcion/O=SigulaPunya/OU=SigulaPunya/CN=DebianVPN/name=si gula /emailAddress=huhu86977@gmail.com
+                DirName:/C=MY/ST=Johor/L=Concepcion/O=MoonlightVPN/OU=MoonlightVPN/CN=MoonlightVPN/name=D-Kyo/emailAddress=kyojenmoon@gmail.com
                 serial:8C:5B:0D:CB:E1:EA:F3:C4
 
             X509v3 Extended Key Usage:
@@ -676,7 +676,7 @@ refresh_pattern ^ftp: 1440 20% 10080
 refresh_pattern ^gopher: 1440 0% 1440
 refresh_pattern -i (/cgi-bin/|\?) 0 0% 0
 refresh_pattern . 0 20% 4320
-visible_hostname JohnFordTV
+visible_hostname MoonlightVPS
 mySquid
 
  # Setting machine's IP Address inside of our Squid config(security that only allows this machine to use this proxy server)
