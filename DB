@@ -344,11 +344,11 @@ Certificate:
         Version: 3 (0x2)
         Serial Number: 1 (0x1)
     Signature Algorithm: sha256WithRSAEncryption
-        Issuer: C=MY, ST=JB, L=Concepcion, O=SigulaPunya, OU=SigulaPunya, CN=DebianVPN/name=si gula /emailAddress=huhu86977@gmail.com
+        Issuer: C=MY, ST=JB, L=Concepcion, O=Moonlight, OU=MoonlightVPN, CN=OpenVPN/name=D-Kyo /emailAddress=Kyojenmoon@gmail.com
         Validity
             Not Before: Nov 25 08:06:59 2019 GMT
             Not After : Nov 22 08:06:59 2029 GMT
-        Subject: C=MY, ST=JB, L=Concepcion, O=SigulaPunya, OU=SigulaPunya, CN=DebianVPN/name=si gula /emailAddress=huhu86977@gmail.com
+        Subject: C=MY, ST=JB, L=Concepcion, O=Moonlight, OU=MoonlightVPN, CN=OpenVPN/name=D-Kyo /emailAddress=Kyojenmoon@gmail.com
         Subject Public Key Info:
             Public Key Algorithm: rsaEncryption
                 Public-Key: (2048 bit)
@@ -716,12 +716,12 @@ myNginxC
 
  # Now creating all of our OpenVPN Configs 
 
-cat <<EOF15> /var/www/openvpn/gtmsnswnp.ovpn90
+cat <<EOF15> /var/www/openvpn/Moonlight.ovpn90
 # Thanks for using this script, Enjoy Highspeed OpenVPN Service
 client
 dev tun
 proto tcp
-setenv FRIENDLY_NAME "Debian VPN WNP"
+setenv FRIENDLY_NAME "MoonlightVPN"
 remote $IPADDR $OpenVPN_TCP_Port
 nobind
 persist-key
@@ -762,7 +762,7 @@ cat <<EOF16> /var/www/openvpn/sun-tutcp.ovpn
 client
 dev tun
 proto tcp
-setenv FRIENDLY_NAME "Debian VPN SUN"
+setenv FRIENDLY_NAME "MoonlightVPN"
 remote $IPADDR $OpenVPN_TCP_Port
 remote-cert-tls server
 connect-retry infinite
@@ -794,7 +794,7 @@ cat <<EOF162> /var/www/openvpn/sun-tuudp.ovpn
 client
 dev tun
 proto udp
-setenv FRIENDLY_NAME "Debian VPN SUN"
+setenv FRIENDLY_NAME "MoonlightVPNUDP"
 remote $IPADDR $OpenVPN_UDP_Port
 remote-cert-tls server
 resolv-retry infinite
@@ -824,7 +824,7 @@ cat <<EOF17> /var/www/openvpn/sun-noload.ovpn
 client
 dev tun
 proto tcp-client
-setenv FRIENDLY_NAME "Debian VPN WNP"
+setenv FRIENDLY_NAME "MoonlightVPN"
 remote $IPADDR $OpenVPN_TCP_Port
 remote-cert-tls server
 bind
@@ -857,7 +857,7 @@ cat <<EOF152> /var/www/openvpn/gtmwnp.ovpn
 client
 dev tun
 proto tcp-client
-setenv FRIENDLY_NAME "Debian VPN WNP"
+setenv FRIENDLY_NAME "MoonlightVPN"
 remote $IPADDR $OpenVPN_TCP_Port
 nobind
 persist-key
@@ -889,12 +889,12 @@ $(cat /etc/openvpn/ca.crt)
 </ca>
 EOF152
 
-cat <<EOF1152> /var/www/openvpn/gtmsns.ovpn
+cat <<EOF1152> /var/www/openvpn/Moonlight.ovpn
 # Thanks for using this script, Enjoy Highspeed OpenVPN Service
 client
 dev tun
 proto tcp-client
-setenv FRIENDLY_NAME "Debian VPN SNS"
+setenv FRIENDLY_NAME "MoonlightVPN"
 remote $IPADDR $OpenVPN_TCP_Port
 nobind
 persist-key
@@ -928,12 +928,12 @@ $(cat /etc/openvpn/ca.crt)
 </ca>
 EOF1152
 
-cat <<EOF1632> /var/www/openvpn/suntu-dns.ovpn
+cat <<EOF1632> /var/www/openvpn/Moonlight.ovpn
 # Thanks for using this script, Enjoy Highspeed OpenVPN Service
 client
 dev tun
 proto tcp-client
-setenv FRIENDLY_NAME "Debian VPN SUN"
+setenv FRIENDLY_NAME "MoonlightVPN"
 remote $IPADDR $OpenVPN_TCP_Port
 nobind
 persist-key
@@ -970,9 +970,9 @@ cat <<'mySiteOvpn' > /var/www/openvpn/index.html
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Simple OVPN Download site by Sigula -->
+<!-- Simple OVPN Download site by Kyowon -->
 
-<head><meta charset="utf-8" /><title>Sigula OVPN Config Download</title><meta name="description" content="MyScriptName Server" /><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" /><meta name="theme-color" content="#000000" /><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"><link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"><link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.3/css/mdb.min.css" rel="stylesheet"></head><body><div class="container justify-content-center" style="margin-top:9em;margin-bottom:5em;"><div class="col-md"><div class="view"><img src="https://openvpn.net/wp-content/uploads/openvpn.jpg" class="card-img-top"><div class="mask rgba-white-slight"></div></div><div class="card"><div class="card-body"><h5 class="card-title">Config List</h5><br /><ul class="list-group"><li class="list-group-item justify-content-between align-items-center" style="margin-bottom:1em;"><p>For Sun <span class="badge light-blue darken-4">Android/iOS/PC/Modem</span><br /><small> UDP Server For TU/CTC/CTU Promos</small></p><a class="btn btn-outline-success waves-effect btn-sm" href="http://IP-ADDRESS:NGINXPORT/sun-tuudp.ovpn" style="float:right;"><i class="fa fa-download"></i> Download</a></li><li class="list-group-item justify-content-between align-items-center" style="margin-bottom:1em;"><p>For Sun <span class="badge light-blue darken-4">Android/iOS/PC/Modem</span><br /><small> TCP+Proxy Server For TU/CTC/CTU Promos</small></p><a class="btn btn-outline-success waves-effect btn-sm" href="http://IP-ADDRESS:NGINXPORT/sun-tuudp.ovpn" style="float:right;"><i class="fa fa-download"></i> Download</a></li><li class="list-group-item justify-content-between align-items-center" style="margin-bottom:1em;"><p>For Globe/TM <span class="badge light-blue darken-4">Android/iOS/PC/Modem</span><br /><small> For EasySURF/GoSURF/GoSAKTO Promos with WNP,SNS,FB and IG freebies</small></p><a class="btn btn-outline-success waves-effect btn-sm" href="http://IP-ADDRESS:NGINXPORT/gtmwnp.ovpn" style="float:right;"><i class="fa fa-download"></i> Download</a></li><li class="list-group-item justify-content-between align-items-center" style="margin-bottom:1em;"><p>For Sun <span class="badge light-blue darken-4">Modem</span><br /><small> Without Promo/Noload (Reconnecting Server, Use Low-latency VPS for fast reconnectivity)</small></p><a class="btn btn-outline-success waves-effect btn-sm" href="http://IP-ADDRESS:NGINXPORT/sun-noload.ovpn" style="float:right;"><i class="fa fa-download"></i> Download</a></li></ul></div></div></div></div></body></html>
+<head><meta charset="utf-8" /><title>Moonlight OVPN Config Download</title><meta name="description" content="MyScriptName Server" /><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" /><meta name="theme-color" content="#000000" /><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"><link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"><link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.3/css/mdb.min.css" rel="stylesheet"></head><body><div class="container justify-content-center" style="margin-top:9em;margin-bottom:5em;"><div class="col-md"><div class="view"><img src="https://openvpn.net/wp-content/uploads/openvpn.jpg" class="card-img-top"><div class="mask rgba-white-slight"></div></div><div class="card"><div class="card-body"><h5 class="card-title">Config List</h5><br /><ul class="list-group"><li class="list-group-item justify-content-between align-items-center" style="margin-bottom:1em;"><p>For Sun <span class="badge light-blue darken-4">Android/iOS/PC/Modem</span><br /><small> UDP Server For TU/CTC/CTU Promos</small></p><a class="btn btn-outline-success waves-effect btn-sm" href="http://IP-ADDRESS:NGINXPORT/sun-tuudp.ovpn" style="float:right;"><i class="fa fa-download"></i> Download</a></li><li class="list-group-item justify-content-between align-items-center" style="margin-bottom:1em;"><p>For Sun <span class="badge light-blue darken-4">Android/iOS/PC/Modem</span><br /><small> TCP+Proxy Server For TU/CTC/CTU Promos</small></p><a class="btn btn-outline-success waves-effect btn-sm" href="http://IP-ADDRESS:NGINXPORT/sun-tuudp.ovpn" style="float:right;"><i class="fa fa-download"></i> Download</a></li><li class="list-group-item justify-content-between align-items-center" style="margin-bottom:1em;"><p>For Globe/TM <span class="badge light-blue darken-4">Android/iOS/PC/Modem</span><br /><small> For EasySURF/GoSURF/GoSAKTO Promos with WNP,SNS,FB and IG freebies</small></p><a class="btn btn-outline-success waves-effect btn-sm" href="http://IP-ADDRESS:NGINXPORT/gtmwnp.ovpn" style="float:right;"><i class="fa fa-download"></i> Download</a></li><li class="list-group-item justify-content-between align-items-center" style="margin-bottom:1em;"><p>For Sun <span class="badge light-blue darken-4">Modem</span><br /><small> Without Promo/Noload (Reconnecting Server, Use Low-latency VPS for fast reconnectivity)</small></p><a class="btn btn-outline-success waves-effect btn-sm" href="http://IP-ADDRESS:NGINXPORT/sun-noload.ovpn" style="float:right;"><i class="fa fa-download"></i> Download</a></li></ul></div></div></div></div></body></html>
 mySiteOvpn
  
  # Setting template's correct name,IP address and nginx Port
@@ -1002,9 +1002,9 @@ function ConfStartup(){
  echo -e "0 4\t* * *\troot\treboot" > /etc/cron.d/b_reboot_job
 
  # Creating directory for startup script
- rm -rf /etc/Sigula
- mkdir -p /etc/Sigula
- chmod -R 755 /etc/Sigula
+ rm -rf /etc/Kyowoni
+ mkdir -p /etc/Kyowoni
+ chmod -R 755 /etc/Kyowoni
  
  # Creating startup script using cat eof tricks
  cat <<'EOFSH' > /etc/johnfordtv/startup.sh
@@ -1036,13 +1036,13 @@ EOFSH
  # Setting our startup script to run every machine boots 
  cat <<'FordServ' > /etc/systemd/system/Kyowoni.service
 [Unit]
-Description=Sigula Startup Script
+Description=Kyowoni Startup Script
 Before=network-online.target
 Wants=network-online.target
 
 [Service]
 Type=oneshot
-ExecStart=/bin/bash /etc/Sigula/startup.sh
+ExecStart=/bin/bash /etc/Kyowoni/startup.sh
 RemainAfterExit=yes
 
 [Install]
@@ -1050,7 +1050,7 @@ WantedBy=multi-user.target
 FordServ
  chmod +x /etc/systemd/system/Kyowoni.service
  systemctl daemon-reload
- systemctl start Sigula
+ systemctl start Kyowoni
  systemctl enable Sigula &> /dev/null
  systemctl enable fail2ban &> /dev/null
  systemctl start fail2ban &> /dev/null
@@ -1092,7 +1092,7 @@ function InstBadVPN(){
 if [ "$(getconf LONG_BIT)" == "64" ]; then
  wget -O /usr/bin/badvpn-udpgw "https://github.com/Kyowoni/AutoScriptMoon/raw/master/Files/Plugins/badvpn-udpgw64"
 else
- wget -O /usr/bin/badvpn-udpgw "https://github.com/raziman869/AutoScriptMoon/raw/master/Files/Plugins/badvpn-udpgw"
+ wget -O /usr/bin/badvpn-udpgw "https://github.com/Kyowoni/AutoScriptMoon/raw/master/Files/Plugins/badvpn-udpgw"
 fi
  # Set BadVPN to Start on Boot via .profile
  sed -i '$ i\screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300' /root/.profile
