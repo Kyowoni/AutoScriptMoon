@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Script Created by John Ford Sangalang <exodia090@gmail.com>
+# Script Created by MoonlightVPN <Kyojenmoongmail.com>
 
 # extract ip address
 if [ -z "$1" ]; then
@@ -261,7 +261,7 @@ echo "nameserver 8.8.4.4" >> /etc/resolv.conf
 sed -i '$ i\echo "nameserver 8.8.8.8" > /etc/resolv.conf' /etc/rc.local
 sed -i '$ i\echo "nameserver 8.8.4.4" >> /etc/resolv.conf' /etc/rc.local
 # set time GMT +8
-ln -fs /usr/share/zoneinfo/Asia/Manila /etc/localtime
+ln -fs /usr/share/zoneinfo/Asia/KualaLumpur /etc/localtime
 # setting ufw
 ufw allow ssh
 ufw allow 1194/tcp
