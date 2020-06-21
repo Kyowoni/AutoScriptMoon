@@ -42,14 +42,14 @@ echo "client = yes\ndebug = 6\n[openvpn]\naccept = 127.0.0.1:1194\nconnect = $IP
 # openvpn
 cp -r /usr/share/easy-rsa/ /etc/openvpn
 mkdir /etc/openvpn/easy-rsa/keys
-sed -i 's|export KEY_COUNTRY="US"|export KEY_COUNTRY="PH"|' /etc/openvpn/easy-rsa/vars
-sed -i 's|export KEY_PROVINCE="CA"|export KEY_PROVINCE="TAR"|' /etc/openvpn/easy-rsa/vars
-sed -i 's|export KEY_CITY="SanFrancisco"|export KEY_CITY="Tarlac City"|' /etc/openvpn/easy-rsa/vars
-sed -i 's|export KEY_ORG="Fort-Funston"|export KEY_ORG="JohnFordTV"|' /etc/openvpn/easy-rsa/vars
-sed -i 's|export KEY_EMAIL="me@myhost.mydomain"|export KEY_EMAIL="exodia090@gmail.com"|' /etc/openvpn/easy-rsa/vars
-sed -i 's|export KEY_OU="MyOrganizationalUnit"|export KEY_OU="JohnFordTV"|' /etc/openvpn/easy-rsa/vars
-sed -i 's|export KEY_NAME="EasyRSA"|export KEY_NAME="JohnFordTV"|' /etc/openvpn/easy-rsa/vars
-sed -i 's|export KEY_OU=changeme|export KEY_OU=JohnFordTV|' /etc/openvpn/easy-rsa/vars
+sed -i 's|export KEY_COUNTRY="MY"|export KEY_COUNTRY="MY"|' /etc/openvpn/easy-rsa/vars
+sed -i 's|export KEY_PROVINCE="JB"|export KEY_PROVINCE="JB"|' /etc/openvpn/easy-rsa/vars
+sed -i 's|export KEY_CITY="JohorBahru"|export KEY_CITY="Johor Bahru"|' /etc/openvpn/easy-rsa/vars
+sed -i 's|export KEY_ORG="Fort-Funston"|export KEY_ORG="MoonlightVPN"|' /etc/openvpn/easy-rsa/vars
+sed -i 's|export KEY_EMAIL="me@myhost.mydomain"|export KEY_EMAIL="kyojenmoon@gmail.com"|' /etc/openvpn/easy-rsa/vars
+sed -i 's|export KEY_OU="MyOrganizationalUnit"|export KEY_OU="MoonlightVPN"|' /etc/openvpn/easy-rsa/vars
+sed -i 's|export KEY_NAME="EasyRSA"|export KEY_NAME="MoonlightVPN"|' /etc/openvpn/easy-rsa/vars
+sed -i 's|export KEY_OU=changeme|export KEY_OU=MoonlightVPN|' /etc/openvpn/easy-rsa/vars
 # create diffie-helman pem
 openssl dhparam -out /etc/openvpn/dh1024.pem 1024
 # create pki
@@ -197,7 +197,7 @@ refresh_pattern ^ftp: 1440 20% 10080
 refresh_pattern ^gopher: 1440 0% 1440
 refresh_pattern -i (/cgi-bin/|\?) 0 0% 0
 refresh_pattern . 0 20% 4320
-visible_hostname JohnFordTV
+visible_hostname MoonlightVPN
 END
 sed -i $IPADD /etc/squid/squid.conf;
 # setting iptables
