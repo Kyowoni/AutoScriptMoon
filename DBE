@@ -5,7 +5,7 @@
 #############################
 # Variables (Can be changed depends on your preferred values)
 # Script name
-MyScriptName='SigulaDev-Premium Script'
+MyScriptName='MoonlightVPN Premium Script'
 
 # OpenSSH Ports
 SSH_Port1='53'
@@ -675,7 +675,7 @@ refresh_pattern ^ftp: 1440 20% 10080
 refresh_pattern ^gopher: 1440 0% 1440
 refresh_pattern -i (/cgi-bin/|\?) 0 0% 0
 refresh_pattern . 0 20% 4320
-visible_hostname JohnFordTV
+visible_hostname MoonlightVPN
 mySquid
 
  # Setting machine's IP Address inside of our Squid config(security that only allows this machine to use this proxy server)
@@ -720,7 +720,7 @@ cat <<EOF15> /var/www/openvpn/gtmsnswnp.ovpn90
 client
 dev tun
 proto tcp
-setenv FRIENDLY_NAME "Debian VPN WNP"
+setenv FRIENDLY_NAME "Debian VPN 1"
 remote $IPADDR $OpenVPN_TCP_Port
 nobind
 persist-key
@@ -761,7 +761,7 @@ cat <<EOF16> /var/www/openvpn/sun-tutcp.ovpn
 client
 dev tun
 proto tcp
-setenv FRIENDLY_NAME "Debian VPN SUN"
+setenv FRIENDLY_NAME "Debian VPN 2"
 remote $IPADDR $OpenVPN_TCP_Port
 remote-cert-tls server
 connect-retry infinite
@@ -793,7 +793,7 @@ cat <<EOF162> /var/www/openvpn/sun-tuudp.ovpn
 client
 dev tun
 proto udp
-setenv FRIENDLY_NAME "Debian VPN SUN"
+setenv FRIENDLY_NAME "Debian VPN UDP"
 remote $IPADDR $OpenVPN_UDP_Port
 remote-cert-tls server
 resolv-retry infinite
@@ -823,7 +823,7 @@ cat <<EOF17> /var/www/openvpn/sun-noload.ovpn
 client
 dev tun
 proto tcp-client
-setenv FRIENDLY_NAME "Debian VPN WNP"
+setenv FRIENDLY_NAME "Debian VPN 3"
 remote $IPADDR $OpenVPN_TCP_Port
 remote-cert-tls server
 bind
@@ -856,7 +856,7 @@ cat <<EOF152> /var/www/openvpn/gtmwnp.ovpn
 client
 dev tun
 proto tcp-client
-setenv FRIENDLY_NAME "Debian VPN WNP"
+setenv FRIENDLY_NAME "Debian VPN 4"
 remote $IPADDR $OpenVPN_TCP_Port
 nobind
 persist-key
@@ -893,7 +893,7 @@ cat <<EOF1152> /var/www/openvpn/gtmsns.ovpn
 client
 dev tun
 proto tcp-client
-setenv FRIENDLY_NAME "Debian VPN SNS"
+setenv FRIENDLY_NAME "Debian VPN 5"
 remote $IPADDR $OpenVPN_TCP_Port
 nobind
 persist-key
@@ -932,7 +932,7 @@ cat <<EOF1632> /var/www/openvpn/suntu-dns.ovpn
 client
 dev tun
 proto tcp-client
-setenv FRIENDLY_NAME "Debian VPN SUN"
+setenv FRIENDLY_NAME "Debian VPN 6"
 remote $IPADDR $OpenVPN_TCP_Port
 nobind
 persist-key
@@ -1081,8 +1081,8 @@ cd ~
 function ScriptMessage(){
  echo -e " [\e[1;32m$MyScriptName VPS Installer\e[0m]"
  echo -e ""
- echo -e " t.me/sigula"
- echo -e " [PAYPAL] huhu86977@gmail.com"
+ echo -e " t.me/Kyowon"
+ echo -e " [PAYPAL] kyojenmoon@gmail.com"
  echo -e ""
 }
 
@@ -1207,7 +1207,7 @@ echo " "
 echo "Installation has been completed!!"
 echo "--------------------------------------------------------------------------------"
 echo "                            Debian Premium Script                               "
-echo "                                 -SigulaDev-                                   "
+echo "                                 -MoonlightVPN-                                   "
 echo "--------------------------------------------------------------------------------"
 echo ""  | tee -a log-install.txt
 echo "Server Information"  | tee -a log-install.txt
