@@ -10,7 +10,7 @@ MyScriptName='MoonlightVPN Premium Script'
 # OpenSSH Ports
 SSH_Port1='22'
 SSH_Port2='53'
-SSH_Port2='110'
+SSH_Port3='110'
 
 # Your SSH Banner
 SSH_Banner='https://raw.githubusercontent.com/Kyowoni/AutoScriptMoon/master/Files/Plugins/banner'
