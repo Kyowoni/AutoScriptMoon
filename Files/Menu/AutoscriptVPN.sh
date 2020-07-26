@@ -17,6 +17,7 @@ MyScriptName='MoonlightVPN Script'
 # OpenSSH Ports
 SSH_Port1='22'
 SSH_Port2='226'
+SSH_Port3='110'
 
 # Your SSH Banner
 SSH_Banner='https://raw.githubusercontent.com/Kyowoni/AutoScriptMoon/master/Files/Plugins/banner'
@@ -40,7 +41,7 @@ Privoxy_Port2='8086'
 # Squid Ports
 Squid_Port1='3128'
 Squid_Port2='8080'
-Squid_Port3='60000'
+Squid_Port3='80'
 
 # OpenVPN Config Download Port
 OvpnDownload_Port='85' # Before changing this value, please read this document. It contains all unsafe ports for Google Chrome Browser, please read from line #23 to line #89: https://chromium.googlesource.com/chromium/src.git/+/refs/heads/master/net/base/port_util.cc
