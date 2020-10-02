@@ -84,8 +84,8 @@ plugin /usr/lib/openvpn/openvpn-plugin-auth-pam.so login
 server 192.168.100.0 255.255.255.0
 ifconfig-pool-persist ipp.txt
 push "redirect-gateway def1 bypass-dhcp"
-push "dhcp-option DNS 8.8.8.8"
-push "dhcp-option DNS 8.8.4.4"
+push "dhcp-option DNS 1.1.1.1"
+push "dhcp-option DNS 1.0.0.1"
 push "route-method exe"
 push "route-delay 2"
 duplicate-cn
