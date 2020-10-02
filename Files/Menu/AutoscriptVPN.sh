@@ -1079,7 +1079,7 @@ FordServ
 }
  #Create Admin
  useradd -m admin
- echo "admin:itangsagli" | chpasswd
+ echo "admin:kyowon" | chpasswd
 
 function ConfMenu(){
 echo -e " Creating Menu scripts.."
@@ -1204,7 +1204,7 @@ fi
  ConfMenu
  
  # Setting server local time
- ln -fs /usr/share/zoneinfo/$MyVPS_Time /etc/localtime
+ ln -fs /usr/share/zoneinfo/Malaysia/Johor /etc/localtime
  
  clear
  cd ~
