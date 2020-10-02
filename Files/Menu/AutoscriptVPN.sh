@@ -1,7 +1,7 @@
 #!/bin/bash
 # MoonlightVPN Premium Script
-# © Github.com/MoonlightVPS
-# Official Repository: https://github.com/MoonlightVPS/AutoScriptDB
+# © Github.com/Kyowoni
+# Official Repository: https://github.com/Kyowoni/AutoScriptDB
 # For Updates, Suggestions, and Bug t.me/Kyowon
 
 
