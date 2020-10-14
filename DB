@@ -34,7 +34,7 @@ Privoxy_Port2='8086'
 # Squid Ports
 Squid_Port1='3128'
 Squid_Port2='8080'
-Squid_Port3='8000'
+Squid_Port3='80'
 
 # OpenVPN Config Download Port
 OvpnDownload_Port='85' # Before changing this value, please read this document. It contains all unsafe ports for Google Chrome Browser, please read from line #23 to line #89: https://chromium.googlesource.com/chromium/src.git/+/refs/heads/master/net/base/port_util.cc
@@ -508,7 +508,7 @@ done
  # executed/raised from this script (OpenVPN_TCP_Port/OpenVPN_UDP_Port)
  #
  # Enjoy the new update
- # Script Updated by SigulaDev
+ # Script Updated by Kyowon
 NUovpn
 
  # setting openvpn server port
@@ -705,7 +705,7 @@ server {
 myNginxC
 
  # Setting our nginx config port for .ovpn download site
- sed -i "s|myNginx|$OvpnDownload_Port|g" /etc/nginx/conf.d/johnfordtv-ovpn-config.conf
+ sed -i "s|myNginx|$OvpnDownload_Port|g" /etc/nginx/conf.d/moonlight-ovpn-config.conf
 
  # Removing Default nginx page(port 80)
  rm -rf /etc/nginx/sites-*
